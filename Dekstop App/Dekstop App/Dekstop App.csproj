@@ -59,7 +59,11 @@
     <Compile Include="Admin Menu Form.Designer.cs">
       <DependentUpon>Admin Menu Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="BL\users.cs" />
+    <Compile Include="BL\item.cs" />
+    <Compile Include="BL\users.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="DL\itemDL.cs" />
     <Compile Include="DL\usersDL.cs" />
     <Compile Include="Sign In.cs">
       <SubType>Form</SubType>
