@@ -50,7 +50,6 @@ namespace Dekstop_App
                 Admin_Menu_Form form = new Admin_Menu_Form();
                 this.Hide();
                 form.Show();
-
             }
             else
             {

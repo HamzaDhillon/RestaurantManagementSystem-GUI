@@ -7,44 +7,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Dekstop_App.DL;
 
 namespace Dekstop_App
 {
     public partial class Admin_Menu_Form : Form
     {
+        private static Admin_Menu_Form _instance;
+        public static Admin_Menu_Form Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = new Admin_Menu_Form();
+                }
+                return _instance;
+            }
+        }
         public Admin_Menu_Form()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void iconPictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void iconButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void iconButton5_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void Admin_Menu_Form_FormClosing(object sender, FormClosingEventArgs e)
@@ -52,17 +35,30 @@ namespace Dekstop_App
             Application.Exit();
         }
 
-        private void iconButton1_Click_1(object sender, EventArgs e)
+        
+
+        private void iconButtondessert_Click_1(object sender, EventArgs e)
         {
-            if (pnlContainer.Controls.Contains(ucDeserts.Instance))
+            navigate.ToDesserts();
+        }
+
+        private void Add_Click(object sender, EventArgs e)
+        {
+            navigate.toAdd();
+        }
+
+        private void iconbtnthreshold_Click(object sender, EventArgs e)
+        {
+            if (pnlContainer.Controls.Contains(ucThreshold.Instance))
             {
-                ucDeserts.Instance.BringToFront();
+                ucThreshold.Instance.BringToFront();
             }
             else
             {
-                pnlContainer.Controls.Add(ucDeserts.Instance);
-                ucDeserts.Instance.Dock = DockStyle.Fill;
-                ucDeserts.Instance.BringToFront();
+                pnlContainer.Controls.Add(ucThreshold.Instance);
+                ucThreshold.Instance.Dock = DockStyle.Fill;
+                ucThreshold.Instance.BringToFront();
+
             }
         }
     }

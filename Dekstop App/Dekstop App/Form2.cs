@@ -22,19 +22,25 @@ namespace Dekstop_App
             string users_path = "users.txt";
             if (usersDL.readlogindata(users_path) == true)
             {
-                MessageBox.Show("Users Data Loaded succesfully !");
+                //MessageBox.Show("Users Data Loaded succesfully !");
             }
             else
             {
                 MessageBox.Show("Users Data not Loaded succesfully !");
             }
-
+            string items_path = "items.txt";
+            if (itemDL.datareader(items_path) == true)
+            {
+                //MessageBox.Show("iTEMs Data Loaded succesfully !");
+            }
+            else
+            {
+                MessageBox.Show("ITEMS Data not Loaded succesfully !");
+            }
         }
       
         private void Sign_In_Click(object sender, EventArgs e)
         {
-            
-            MessageBox.Show("Hello There");
             Sign_In form = new Sign_In();
             this.Hide();
             form.Show();

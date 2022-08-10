@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dekstop_App.BL
 {
-    class item
+    public class item
     {
 		public item()
 		{

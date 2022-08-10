@@ -27,22 +27,21 @@ namespace Dekstop_App
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        public void InitializeComponent()
         {
             this.pnlMain = new System.Windows.Forms.Panel();
             this.sidepanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.pnlContainer = new System.Windows.Forms.Panel();
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.iconbtnthreshold = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.Add = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.iconButtondessert = new FontAwesome.Sharp.IconButton();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.pnlMain.SuspendLayout();
             this.sidepanel.SuspendLayout();
@@ -80,14 +79,21 @@ namespace Dekstop_App
             this.panel1.Controls.Add(this.iconButton4);
             this.panel1.Controls.Add(this.iconButton3);
             this.panel1.Controls.Add(this.iconbtnthreshold);
-            this.panel1.Controls.Add(this.iconButton2);
             this.panel1.Controls.Add(this.Add);
-            this.panel1.Controls.Add(this.iconButton1);
+            this.panel1.Controls.Add(this.iconButtondessert);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 86);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(163, 357);
             this.panel1.TabIndex = 4;
+            // 
+            // panel4
+            // 
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel4.Location = new System.Drawing.Point(0, 341);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(163, 16);
+            this.panel4.TabIndex = 0;
             // 
             // panel2
             // 
@@ -110,14 +116,6 @@ namespace Dekstop_App
             this.label1.Size = new System.Drawing.Size(108, 48);
             this.label1.TabIndex = 1;
             this.label1.Text = "Dr. Saucy";
-            // 
-            // panel4
-            // 
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 341);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(163, 16);
-            this.panel4.TabIndex = 0;
             // 
             // pnlContainer
             // 
@@ -150,6 +148,7 @@ namespace Dekstop_App
             this.iconButton5.Size = new System.Drawing.Size(163, 44);
             this.iconButton5.TabIndex = 7;
             this.iconButton5.Text = "Exit";
+            this.iconButton5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton5.UseVisualStyleBackColor = false;
             // 
@@ -169,11 +168,12 @@ namespace Dekstop_App
             this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton4.IconSize = 36;
             this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.iconButton4.Location = new System.Drawing.Point(0, 208);
+            this.iconButton4.Location = new System.Drawing.Point(0, 167);
             this.iconButton4.Name = "iconButton4";
             this.iconButton4.Size = new System.Drawing.Size(163, 41);
             this.iconButton4.TabIndex = 5;
             this.iconButton4.Text = "Reviews";
+            this.iconButton4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton4.UseMnemonic = false;
             this.iconButton4.UseVisualStyleBackColor = false;
@@ -194,12 +194,12 @@ namespace Dekstop_App
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton3.IconSize = 30;
             this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.iconButton3.Location = new System.Drawing.Point(0, 167);
+            this.iconButton3.Location = new System.Drawing.Point(0, 126);
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Size = new System.Drawing.Size(163, 41);
             this.iconButton3.TabIndex = 4;
-            this.iconButton3.Text = "Record";
-            this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton3.Text = "Records";
+            this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton3.UseMnemonic = false;
             this.iconButton3.UseVisualStyleBackColor = false;
@@ -220,41 +220,16 @@ namespace Dekstop_App
             this.iconbtnthreshold.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconbtnthreshold.IconSize = 30;
             this.iconbtnthreshold.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.iconbtnthreshold.Location = new System.Drawing.Point(0, 126);
+            this.iconbtnthreshold.Location = new System.Drawing.Point(0, 85);
             this.iconbtnthreshold.Name = "iconbtnthreshold";
             this.iconbtnthreshold.Size = new System.Drawing.Size(163, 41);
             this.iconbtnthreshold.TabIndex = 3;
             this.iconbtnthreshold.Text = "Threshold";
-            this.iconbtnthreshold.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconbtnthreshold.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconbtnthreshold.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconbtnthreshold.UseMnemonic = false;
             this.iconbtnthreshold.UseVisualStyleBackColor = false;
-            // 
-            // iconButton2
-            // 
-            this.iconButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.iconButton2.BackColor = System.Drawing.Color.Transparent;
-            this.iconButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.iconButton2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton2.FlatAppearance.BorderSize = 0;
-            this.iconButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RosyBrown;
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.DeleteLeft;
-            this.iconButton2.IconColor = System.Drawing.Color.White;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 36;
-            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.iconButton2.Location = new System.Drawing.Point(0, 85);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(163, 41);
-            this.iconButton2.TabIndex = 2;
-            this.iconButton2.Text = "Deletion";
-            this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton2.UseMnemonic = false;
-            this.iconButton2.UseVisualStyleBackColor = false;
+            this.iconbtnthreshold.Click += new System.EventHandler(this.iconbtnthreshold_Click);
             // 
             // Add
             // 
@@ -277,38 +252,41 @@ namespace Dekstop_App
             this.Add.Size = new System.Drawing.Size(163, 41);
             this.Add.TabIndex = 1;
             this.Add.Text = "Addition";
-            this.Add.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Add.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Add.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Add.UseMnemonic = false;
             this.Add.UseVisualStyleBackColor = false;
+            this.Add.Click += new System.EventHandler(this.Add_Click);
             // 
-            // iconButton1
+            // iconButtondessert
             // 
-            this.iconButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.iconButton1.BackColor = System.Drawing.Color.Transparent;
-            this.iconButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RosyBrown;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Cutlery;
-            this.iconButton1.IconColor = System.Drawing.Color.White;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 36;
-            this.iconButton1.Location = new System.Drawing.Point(0, 0);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(163, 44);
-            this.iconButton1.TabIndex = 0;
-            this.iconButton1.Text = "Desserts";
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = false;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click_1);
+            this.iconButtondessert.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.iconButtondessert.BackColor = System.Drawing.Color.Transparent;
+            this.iconButtondessert.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.iconButtondessert.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButtondessert.FlatAppearance.BorderSize = 0;
+            this.iconButtondessert.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RosyBrown;
+            this.iconButtondessert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtondessert.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButtondessert.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.iconButtondessert.IconChar = FontAwesome.Sharp.IconChar.Cutlery;
+            this.iconButtondessert.IconColor = System.Drawing.Color.White;
+            this.iconButtondessert.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtondessert.IconSize = 36;
+            this.iconButtondessert.Location = new System.Drawing.Point(0, 0);
+            this.iconButtondessert.Name = "iconButtondessert";
+            this.iconButtondessert.Size = new System.Drawing.Size(163, 44);
+            this.iconButtondessert.TabIndex = 0;
+            this.iconButtondessert.Text = "Desserts";
+            this.iconButtondessert.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.iconButtondessert.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButtondessert.UseVisualStyleBackColor = false;
+            this.iconButtondessert.Click += new System.EventHandler(this.iconButtondessert_Click_1);
             // 
             // iconPictureBox1
             // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.Maroon;
+            this.iconPictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.iconPictureBox1.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
             this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.FaceLaughWink;
@@ -341,15 +319,14 @@ namespace Dekstop_App
         #endregion
 
         private System.Windows.Forms.Panel pnlMain;
-        private System.Windows.Forms.Panel pnlContainer;
+        public System.Windows.Forms.Panel pnlContainer;
         private System.Windows.Forms.Panel sidepanel;
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton iconButton4;
         private FontAwesome.Sharp.IconButton iconButton3;
         private FontAwesome.Sharp.IconButton iconbtnthreshold;
-        private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton Add;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton iconButtondessert;
         private System.Windows.Forms.Panel panel2;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private System.Windows.Forms.Label label1;
