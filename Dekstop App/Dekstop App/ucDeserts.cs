@@ -51,16 +51,17 @@ namespace Dekstop_App
             }
             if (gvitems.Columns["Edit"].Index == e.ColumnIndex)
             {
-
-                if (panel3.Controls.Contains(ucEdit.Edit))
+                if (panel3.Controls.Contains(ucEdit.Instance))
                 {
-                    ucEdit.Edit.BringToFront();
+                    ucEdit.Instance.setEditFeilds(u);
+                    ucEdit.Instance.BringToFront();
                 }
                 else
                 {
-                    panel3.Controls.Add(ucEdit.Edit);
-                    ucEdit.Edit.Dock = DockStyle.Fill;
-                    ucEdit.Edit.BringToFront();
+                    panel3.Controls.Add(ucEdit.Instance);
+                    ucEdit.Instance.Dock = DockStyle.Fill;
+                    ucEdit.Instance.setEditFeilds(u);
+                    ucEdit.Instance.BringToFront();
 
                 }
             }

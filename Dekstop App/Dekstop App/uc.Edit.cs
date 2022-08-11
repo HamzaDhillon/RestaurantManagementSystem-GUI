@@ -14,21 +14,21 @@ namespace Dekstop_App
 {
     public partial class ucEdit : UserControl
     {
-        private static ucEdit edit;
+        private static ucEdit _instance;
 
         private item previous;
-        public static ucEdit Edit
+        public static ucEdit Instance
         {
             get
             {
-                if (edit == null)
+                if (_instance == null)
                 {
-                    edit = new ucEdit();
+                    _instance = new ucEdit();
                 }
-                return edit;
+                return _instance;
             }
         }
-        public ucEdit()
+        private ucEdit()
         {
             InitializeComponent();
         }
@@ -46,7 +46,12 @@ namespace Dekstop_App
 
         private void ucEdit_Load(object sender, EventArgs e)
         {
-         
+            
+        }
+
+        public void setEditFeilds(item i)
+        {
+            previous = i;
             txtName.Text = previous.Name;
             txtPrice.Text = previous.Price.ToString();
             txtQuantity.Text = previous.Quantity.ToString();
