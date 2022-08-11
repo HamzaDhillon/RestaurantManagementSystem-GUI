@@ -16,7 +16,7 @@ namespace Dekstop_App
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form2());
+            Application.Run(Form2.Instance);
         }
     }
 }

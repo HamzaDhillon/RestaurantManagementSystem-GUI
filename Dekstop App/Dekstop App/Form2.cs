@@ -15,8 +15,20 @@ namespace Dekstop_App
 {
     public partial class Form2 : Form
     {
+        private static Form2 _instance;
+        public static Form2 Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = new Form2();
+                }
+                return _instance;
+            }
+        }
 
-        public Form2()
+        private Form2()
         {
             InitializeComponent();
             string users_path = "users.txt";
@@ -41,9 +53,8 @@ namespace Dekstop_App
       
         private void Sign_In_Click(object sender, EventArgs e)
         {
-            Sign_In form = new Sign_In();
             this.Hide();
-            form.Show();
+            Sign_In.Instance.Show();
         }
 
         private void Label_Click(object sender, EventArgs e)

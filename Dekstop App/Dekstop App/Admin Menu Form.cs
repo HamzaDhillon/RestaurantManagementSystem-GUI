@@ -25,7 +25,7 @@ namespace Dekstop_App
                 return _instance;
             }
         }
-        public Admin_Menu_Form()
+        private Admin_Menu_Form()
         {
             InitializeComponent();
         }

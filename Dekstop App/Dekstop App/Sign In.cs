@@ -14,7 +14,19 @@ namespace Dekstop_App
 {
     public partial class Sign_In : Form
     {
-        public Sign_In()
+        private static Sign_In _instance;
+        public static Sign_In Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = new Sign_In();
+                }
+                return _instance;
+            }
+        }
+        private Sign_In()
         {
             InitializeComponent();
         }
@@ -47,9 +59,8 @@ namespace Dekstop_App
             users u = new users(txtName.Text, txtpass.Text);
             if (usersDL.sign_in(u) != null)
             {
-                Admin_Menu_Form form = new Admin_Menu_Form();
                 this.Hide();
-                form.Show();
+                Admin_Menu_Form.Instance.Show();
             }
             else
             {

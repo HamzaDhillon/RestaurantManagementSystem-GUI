@@ -93,7 +93,16 @@ namespace Dekstop_App.DL
         public static bool datareader(string path)
         {
             string record;
-            StreamReader file = new StreamReader(path);
+            StreamReader file;
+            // return if there is no file to load
+            try
+            {
+                file = new StreamReader(path);
+            }
+            catch (Exception)
+            {
+                return false;
+            }
             if (File.Exists(path))
             {
                 while ((record = file.ReadLine()) != null)
