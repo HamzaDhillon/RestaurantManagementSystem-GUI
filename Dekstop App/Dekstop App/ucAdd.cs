@@ -38,19 +38,26 @@ namespace Dekstop_App
 
         private void btnEnter_Click(object sender, EventArgs e)
         {
-            string name;
-            int price, quantity;
-            name = txtName.Text;
-            price = int.Parse(txtPass.Text);
-            quantity = int.Parse(txtQuantity.Text);
-            item u = new item(name,price ,quantity );
-            itemDL.addItemIntoCustomerList(u);
-            itemDL.savedata(ucDeserts.Instance.items_path);
-            ucDeserts.Instance.dataBind();
-            MessageBox.Show("Item Added", "Item Added", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            txtName.Clear();
-            txtPass.Clear();
-            txtQuantity.Clear();
+            try
+            {
+                string name;
+                int price, quantity;
+                name = txtName.Text;
+                price = int.Parse(txtPass.Text);
+                quantity = int.Parse(txtQuantity.Text);
+                item u = new item(name, price, quantity);
+                itemDL.addItemIntoCustomerList(u);
+                itemDL.savedata(ucDeserts.Instance.items_path);
+                ucDeserts.Instance.dataBind();
+                MessageBox.Show("Item Added", "Item Added", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                txtName.Clear();
+                txtPass.Clear();
+                txtQuantity.Clear();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Invalid", "Invalid Data", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
       

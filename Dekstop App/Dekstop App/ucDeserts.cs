@@ -31,12 +31,16 @@ namespace Dekstop_App
         {
             InitializeComponent();
             gvitems.DataSource = itemDL.ItemsData;
+            gvitems.Columns["Edit"].DisplayIndex = 4;
+            gvitems.Columns["Delete"].DisplayIndex = 4;
         }
         public void dataBind()
         {
             gvitems.DataSource = null;
             gvitems.DataSource = itemDL.ItemsData;
             gvitems.Refresh();
+            gvitems.Columns["Edit"].DisplayIndex = 4;
+            gvitems.Columns["Delete"].DisplayIndex = 4;
 
         }
 
@@ -51,19 +55,7 @@ namespace Dekstop_App
             }
             if (gvitems.Columns["Edit"].Index == e.ColumnIndex)
             {
-                if (panel3.Controls.Contains(ucEdit.Instance))
-                {
-                    ucEdit.Instance.setEditFeilds(u);
-                    ucEdit.Instance.BringToFront();
-                }
-                else
-                {
-                    panel3.Controls.Add(ucEdit.Instance);
-                    ucEdit.Instance.Dock = DockStyle.Fill;
-                    ucEdit.Instance.setEditFeilds(u);
-                    ucEdit.Instance.BringToFront();
-
-                }
+                navigate.toEdit(u);
             }
         }
     }
